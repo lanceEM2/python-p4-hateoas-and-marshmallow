@@ -49,7 +49,7 @@ class Index(Resource):
         }
         
         response = make_response(
-            response_dict,
+            jsonify(response_dict),
             200,
         )
 
@@ -128,7 +128,7 @@ class NewsletterByID(Resource):
         response_dict = {"message": "record successfully deleted"}
 
         response = make_response(
-            response_dict,
+            jsonify(response_dict),
             200
         )
 
